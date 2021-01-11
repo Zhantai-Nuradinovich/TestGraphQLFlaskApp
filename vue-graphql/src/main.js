@@ -7,9 +7,10 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import VueApollo, { ApolloProvider } from 'vue-apollo';
 
 Vue.config.productionTip = false;
+Vue.config.devtools = true;
 
 const httpLink = new HttpLink({
-  uri: 'http://127.0.0.1:5000/graphql'
+  uri: 'http://0.0.0.0:5000/graphql'
 });
 
 const apolloClient = new ApolloClient({
